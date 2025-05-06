@@ -10,19 +10,19 @@ First: I created a  database called 'click_fit_db' using below SQL script:
 
 Second: Then, I created 'users' table with the specified columns using below script:
 
-CREATE TABLE users (
+`CREATE TABLE users (
     ID INT NOT NULL AUTO_INCREMENT,
     email VARCHAR(255) CHARACTER SET 'utf8mb4' NOT NULL,
     password VARCHAR(255) CHARACTER SET 'utf8mb4' NOT NULL,
     type VARCHAR(255) CHARACTER SET 'utf8mb4' NOT NULL,
     active TINYINT DEFAULT 1,
     PRIMARY KEY (ID)
-);
+);`
 
 
 [2] To Create Stored Procedure `addUser` I used the following SQL:
-DELIMITER //
 
+`DELIMITER //
 CREATE PROCEDURE addUser(
     IN p_email VARCHAR(255),
     IN p_password VARCHAR(255),
@@ -33,7 +33,8 @@ BEGIN
     VALUES (p_email, p_password, p_type, 1);
 END //
 
-DELIMITER ;
+DELIMITER ;`
+
 
 The SQL Above does the following:
 - Defines a stored procedure `addUser` to insert a new user.
@@ -43,7 +44,7 @@ The SQL Above does the following:
 
 [3]Then, I wrote a call to stored procedure `addUser` that inserts a new user, I wrote and ran the following SQL to insert a sample user.
 
-CALL addUser('john.doe@example.com', 'securePass123', 'member');
+`CALL addUser('john.doe@example.com', 'securePass123', 'member');`
 
 It inserts a user with email, password and type.
 
@@ -55,18 +56,18 @@ PREREQUISITES:
 
 INSTALLATION:
 1. Clone the Repository
-   git clone https://github.com/your-username/click-fit.git
-   cd click-fit
+   `git clone https://github.com/your-username/click-fit.git
+   cd click-fit`
 
 2. Install Dependencies
-   npm install
+   `npm install`
 
 USAGE:
 1. Start the Server:
-   npm run dev
+   `npm run dev`
 
-2. The server runs on The server runs on http://localhost:3000
-3. Open http://localhost:3000 in a browser to access the website.
+2. The server runs on The server runs on `http://localhost:3000`
+3. Open `http://localhost:3000` in a browser to access the website.
 
 
 TECHNOLOGIES USED:
