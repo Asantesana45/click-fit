@@ -4,10 +4,12 @@ This website features a drag and drop image upload system where the images are m
 BACKEND & MySQL TASKS:
 [1] I used the following SQL script below to create 'users' table with the specified columns as per the instructions given:
 First: I created a  database called 'click_fit_db' using below SQL script:
+
        CREATE DATABASE click_fit_db;
        USE click_fit_db;
 
 Second: Then, I created 'users' table with the specified columns using below script:
+
 CREATE TABLE users (
     ID INT NOT NULL AUTO_INCREMENT,
     email VARCHAR(255) CHARACTER SET 'utf8mb4' NOT NULL,
