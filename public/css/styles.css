@@ -1,0 +1,774 @@
+/* Existing body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* This is my hero section */
+.hero {
+    background: linear-gradient(#3800e7, #8a15ff); /* Using $blue and $purple from provided CSS */
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'DM Mono', monospace;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 1;}
+
+
+/* These are New styles adapted from provided CSS i must rememeber that*/
+.hero .main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;}
+
+.hero .main:before,
+.hero .main:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -3;
+}
+
+.hero .main:before {
+    right: 0;
+    bottom: -19px;
+    height: 30em;
+    width: 30em;
+    border-radius: 30em;
+    background: linear-gradient(#3800e7, #8a15ff);
+    align-self: flex-end;
+    animation: gradient-fade 8s ease-in-out 3s infinite alternate;}
+
+.hero .main:after {
+    top: 0;
+    left: 30px;
+    height: 10em;
+    width: 10em;
+    border-radius: 10em;
+    background: linear-gradient(#3800e7, #8a15ff);
+    animation: gradient-fade-alt 6s ease-in-out 3s infinite alternate;
+}
+
+.hero .main__text-wrapper {
+    position: relative;
+    padding: 2em;}
+
+.hero .main__text-wrapper:before,
+.hero .main__text-wrapper:after {
+    content: "";
+    display: block;
+    position: absolute;}
+
+.hero .main__text-wrapper:before {
+    z-index: -1;
+    top: -3em;
+    right: -3em;
+    width: 13em;
+    height: 13em;
+    opacity: 0.7;
+    border-radius: 13em;
+    background: linear-gradient(#15e0ff, #8a15ff);
+    animation: rotation 7s linear infinite;}
+
+.hero .main__text-wrapper:after {
+    z-index: -1;
+    bottom: -20em;
+    width: 20em;
+    height: 20em;
+    border-radius: 20em;
+    background: linear-gradient(#d000c5, #8a15ff);
+    animation: rotation 7s linear infinite;}
+
+.hero .arrow {
+    z-index: 1000;
+    opacity: 0.5;
+    position: absolute;}
+
+.hero .arrow--top {
+    top: 0;
+    left: -5em;
+}
+
+.hero .arrow--bottom {
+    bottom: 0;
+    right: 3em;
+}
+
+
+.hero .dotted-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.3;
+    animation: rotation 38s linear infinite;
+}
+
+.hero .draw-in {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 10;
+    animation: draw 15s ease-in-out alternate infinite;}
+
+.hero .item-to {
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+
+.hero .bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: ease;}
+
+.hero .bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: ease;}
+
+.hero .bounce-3 {
+    animation-name: bounce-3;
+    animation-timing-function: ease;}
+
+
+/* I MUST REMEBER THIS IS FOR Animations */
+@keyframes draw {
+    from {
+        stroke-dashoffset: 1000;
+}
+    to {
+        stroke-dashoffset: 0;
+ }
+}
+
+@keyframes bounce-1 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes bounce-2 {
+    0% {
+        transform: translateY(0);
+        }
+    50% {
+        transform: translateY(-30px);
+        }
+    100% {
+        transform: translateY(0);
+            }}
+
+
+@keyframes bounce-3 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+                    }}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+         }}
+
+
+@keyframes gradient-fade {
+    from {
+        transform: translate(10%, -10%) rotate(0deg);
+    }
+    to {
+        transform: translate(50%, -50%) rotate(360deg);
+    }
+}
+
+
+@keyframes gradient-fade-alt {
+    from {
+        transform: translate(-20%, 20%) rotate(0deg);
+    }
+    to {
+        transform: translate(-60%, 60%) rotate(360deg);
+    }
+}
+
+
+/* Existing styles for other sections */
+#drop-area {
+    background: #f8f9fa;
+    border: 2px dashed #007bff;
+    transition: all 0.3s ease;
+}
+
+#drop-area.highlight {
+    background: #e9ecef;
+    border-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* THIS FOR Gradient background for the section */
+.bg-gradient-section {
+    background: linear-gradient(135deg, #6b48ff 0%, #00ddeb 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* FOR Adding a subtle overlay for depth */
+.bg-gradient-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;}
+
+/* i must Ensure container is above the overlay */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Style for the upload card */
+#upload-section .bg-white {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#upload-section .bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*For Drag area enhancements */
+.drag-area {
+    position: relative;
+    overflow: hidden;
+}
+
+.drag-area::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(7, 226, 190, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;}
+
+.drag-area:hover::after {
+    opacity: 1;}
+
+/* For File list styling */
+#document-images li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin: 8px 0;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;}
+
+#document-images li:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+}
+
+#document-images li p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+#document-images li .delete-document {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    transition: color 0.2s ease;}
+
+#document-images li .delete-document:hover {
+    color: #b91c1c;
+}
+
+/* This is  f0r Error message animations I MUST Remember that */
+#filesize-error:not(.hidden),
+#filetype-error:not(.hidden),
+#input-empty-error:not(.hidden) {
+    animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }}
+
+/* THIS IS FOR Next button glow effect , I CAN CHANGE IT LATER*/
+.document-next-button {
+    position: relative;
+    overflow: hidden;}
+
+.document-next-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(30, 231, 73, 0.973) 0%, transparent 20%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+                }
+
+.document-next-button:hover::after {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #upload-section .bg-white {
+        width: 90%;
+    }
+
+    .document-next-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    #document-images li {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #document-images li p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Gradient background for the upload section */
+.bg-gradient-section {
+    background: linear-gradient(135deg, #6b48ff 0%, #00ddeb 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-gradient-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;}
+
+/* Ensure container is above the overlay */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Style for the upload card */
+#upload-section .bg-white {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#upload-section .bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);}
+
+/* Drag area enhancements */
+.drag-area {
+    position: relative;
+    overflow: hidden;
+}
+
+.drag-area::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;}
+
+.drag-area:hover::after {
+    opacity: 1;
+}
+
+/* File list styling */
+#document-images li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin: 8px 0;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;}
+
+#document-images li:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+}
+
+#document-images li p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #374151;}
+
+#document-images li .delete-document {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    transition: color 0.2s ease;}
+
+#document-images li .delete-document:hover {
+    color: #b91c1c;}
+
+/* Error message animations */
+#filesize-error:not(.hidden),
+#filetype-error:not(.hidden),
+#input-empty-error:not(.hidden) {
+    animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Next button glow effect */
+.document-next-button {
+    position: relative;
+    overflow: hidden;}
+
+.document-next-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+     }
+.document-next-button:hover::after {
+    opacity: 1;}
+
+/* Testimonials Section */
+#testimonials-section {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);}
+
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);}
+
+.testimonial-card .card-body {
+    padding: 2rem;
+}
+
+.testimonial-card i {
+    color: #6b48ff;
+    opacity: 0.8;}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.testimonial-card h5 {
+    font-weight: 600;
+    color: #1f2937;}
+
+/* Workout Plans Section */
+.bg-gradient-workout {
+    background: linear-gradient(135deg, #00ddeb 0%, #6b48ff 100%);
+    position: relative;
+    overflow: hidden;}
+
+.bg-gradient-workout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 0;}
+
+.workout-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+.workout-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);}
+
+.workout-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.workout-card .card-body {
+    padding: 1.5rem;
+}
+
+.btn-outline-violet {
+    border-color: #6b48ff;
+    color: #6b48ff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-violet:hover {
+    background-color: #6b48ff;
+    color: #ffffff;
+    border-color: #6b48ff;
+}
+
+/* Community Section */
+#community-section {
+    position: relative;
+    background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+}
+
+#community-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/1920x1080?text=Community+Pattern') no-repeat center center/cover;
+    opacity: 0.1;
+    z-index: 0;}
+
+#community-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-violet {
+    background-color: #6b48ff;
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;}
+
+.btn-violet:hover {
+    background-color: #5a3ce6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.bg-gradient-contact {
+    background: linear-gradient(135deg, #6b48ff 0%, #a78bfa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-gradient-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;}
+
+.contact-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card .form-control {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;          }
+
+.contact-card .form-control:focus {
+    border-color: #6b48ff;
+    box-shadow: 0 0 0 0.2rem rgba(107, 72, 255, 0.25);
+     }
+.contact-card .btn-violet {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.social-icon {
+    color: #6b48ff;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00ddeb;
+    transform: scale(1.2);
+}
+
+.social-icon i {
+    font-size: 1.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #upload-section .bg-white {
+        width: 90%;
+    }
+    .document-next-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+    #document-images li {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    #document-images li p {
+        font-size: 0.85rem;
+    }
+    .testimonial-card,
+    .workout-card,
+    .contact-card {
+        margin-bottom: 1rem;
+    }
+    #community-section .lead {
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .social-icon i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ensure navbar collapse displays on mobile */
+.navbar-collapse {
+    transition: height 0.3s ease;
+}
+
+.navbar-collapse.show {
+    display: block !important;
+    height: auto !important;
+    padding: 1rem;
+    background: #212529; /* Matches .bg-dark */
+}
+
+.navbar-nav {
+    text-align: center; /* Center links in mobile view */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #00ddeb !important; /* Cyan hover effect to match theme */
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        max-height: 80vh;
+        overflow-y: auto;       }
+    .navbar-nav.ms-auto {
+        margin: 0 !important; /* Override ms-auto for mobile */  }
+}

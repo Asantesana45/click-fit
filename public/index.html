@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Fit - Your Fitness Journey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/b41725249e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Click Fit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/workouts">Workouts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="hero text-center text-white">
+              <div class="main">
+            <div class="arrow arrow--top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270.11" height="649.9" overflow="visible">
+                    <style>
+                        .geo-arrow {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 2;
+                            stroke-miterlimit: 10
+                        }
+                    </style>
+                    <g class="item-to bounce-1">
+                        <path class="geo-arrow draw-in" d="M135.06 142.564L267.995 275.5 135.06 408.434 2.125 275.499z" />
+                    </g>
+                    <circle class="geo-arrow item-to bounce-2" cx="194.65" cy="69.54" r="7.96" />
+                    <circle class="geo-arrow draw-in" cx="194.65" cy="39.5" r="7.96" />
+                    <circle class="geo-arrow item-to bounce-3" cx="194.65" cy="9.46" r="7.96" />
+                    <g class="geo-arrow item-to bounce-2">
+                        <path class="st0 draw-in" d="M181.21 619.5l13.27 27 13.27-27zM194.48 644.5v-552" />
+                    </g>
+                </svg>
+                 </div>
+            <div class="arrow arrow--bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="31.35" height="649.9" overflow="visible">
+                    <style>
+                        .geo-arrow {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-width: 2;
+                            stroke-miterlimit: 10
+                        }
+                    </style>
+                    <g class="item-to bounce-1">
+                        <circle class="geo-arrow item-to bounce-3" cx="15.5" cy="580.36" r="7.96" />
+                        <circle class="geo-arrow draw-in" cx="15.5" cy="610.4" r="7.96" />
+                        <circle class="geo-arrow item-to bounce-2" cx="15.5" cy="640.44" r="7.96" />
+                        <g class="item-to bounce-2">
+                            <path class="geo-arrow draw-in" d="M28.94 30.4l-13.26-27-13.27 27zM15.68 5.4v552" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="main__text-wrapper">
+                <h1 class="display-4 animate__animated animate__fadeIn">Welcome to Click Fit</h1>
+                <p class="lead animate__animated animate__fadeInUp">Your ultimate destination for fitness and health.</p>
+                <a href="#upload-section" class="btn btn-warning btn-lg mt-3">Get Started</a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="dotted-circle" width="352" height="352" overflow="visible">
+                    <circle cx="176" cy="176" r="174" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12.921,11.9271"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="fact-section" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Fitness Fact of the Day</h2>
+            <p id="fact-text" class="text-center">Loading fact...</p>
+        </div></section>
+
+<!-- This is Upload Section -->
+ <!-- i must put better styles later -->
+    <section id="upload-section" class="py-5 bg-gradient-section">
+        <div class="container">
+            <h2 class="text-center mb-4 text-white animate__animated animate__fadeIn">Upload Your Fitness Progress</h2>
+        <div class="flex flex-col items-center">
+            <div class="mt-6 py-3 bg-white rounded-lg w-full md:w-1/2 lg:w-1/2 shadow-lg">
+                    <hr class="mt-5 border-gray-200" />
+                <section class="mt-5 px-3 flex gap-6">
+                        <div class="drag-area flex-1 flex flex-col items-center p-5 border-2 border-dotted border-violet-300 rounded-xl bg-violet-50 hover:bg-violet-100 transition-colors duration-300" style="cursor: pointer;">
+                            <i class="fa-sharp fa-solid fa-cloud-arrow-up text-6xl text-violet-500 animate__animated animate__pulse animate__infinite"></i>
+                            <header class="mt-6 text-center">
+                                <span class="drag-file font-medium text-gray-700">Drag image here to upload </span> or
+                                <button class="file-input-button bg-violet-500 hover:bg-violet-600 transition-colors duration-200 shadow-md" 
+                                        style="color: #05f7eb; padding: 0.5rem 1.2rem; border-radius: 9999px; font-size: 0.95rem;">
+                                    Select a File
+                                </button>
+                                <span class="text-gray-700"> from your device</span>
+                            </header>
+                            <p class="mt-12 text-gray-500 text-sm font-medium">Image only, maximum file size - 5MB</p>
+                            <input type="file" class="file-input" accept="image/*" multiple hidden>
+                </div>
+                    </section>
+                    <p class="text-red-700 text-sm hidden mt-3 px-3 transition-opacity duration-300" id="filesize-error">The file size should be less than 5MB</p>
+                    <p class="text-red-700 text-sm hidden mt-3 px-3 transition-opacity duration-300" id="filetype-error">The file must be an image</p>
+                    <p class="hidden text-xl text-red-600 text-center bg-pink-200 mt-6 p-3 rounded-lg mx-3 transition-opacity duration-300" id="input-empty-error"></p>
+                    <ul id="document-images" class="mt-6 px-3 bg-gray-50 rounded-lg"></ul>
+                </div>
+                <div class="w-3/4 md:w-1/2 flex justify-center mt-8">
+                    <button class="document-next-button hover:bg-violet-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                            style="color: #05f7eb; padding: 0.6rem 1.5rem; border-radius: 9999px; font-size: 1rem; background-color: #6b48ff;">
+                        NEXT
+                    </button>
+            </div>
+        </div>
+             </div> </section>
+
+
+    <!-- This is Testimonials Section --> 
+     <!-- don't forget to put pictures in this section -->
+    <section id="testimonials-section" class="py-5 bg-light">
+         <div class="container">
+        <h2 class="text-center mb-5 text-dark animate__animated animate__fadeIn">What Our Users Say</h2>
+               <div class="row g-4">
+            <div class="col-md-4">
+                    <div class="card testimonial-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-quote-left fa-2x text-violet-500 mb-3"></i>
+                            <p class="card-text text-gray-700">"Click Fit helped to transforme my fitness journey, The community and tools kept me motivated."</p>
+                            <h5 class="card-title mt-4 text-dark">Sarah M.</h5>
+                            <p class="text-muted small">Fitness Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-quote-left fa-2x text-violet-500 mb-3"></i>
+                            <p class="card-text text-gray-700">"The workout plans are easy to follow, and I really love tracking my progress!"</p>
+                            <h5 class="card-title mt-4 text-dark">James T.</h5>
+                            <p class="text-muted small">Beginner Athlete</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-quote-left fa-2x text-violet-500 mb-3"></i>
+                            <p class="card-text text-gray-700">"I achieved my goals faster than ever thanks to Click Fit's guidance."</p>
+                            <h5 class="card-title mt-4 text-dark">Emily R.</h5>
+                            <p class="text-muted small">Health Coach</p>
+                        </div>
+                      </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Thiss is Workout Plans Section -->
+    <section id="workout-plans-section" class="py-5 bg-gradient-workout">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white animate__animated animate__fadeIn">Explore Our Workout Plans</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                     <div class="card workout-card h-100 border-0 shadow-lg">
+                        <img src="./assets/images/Strength.jpeg" class="card-img-top" alt="Strength Training">
+                    <div class="card-body p-4">
+                            <h5 class="card-title text-dark">Strength Training</h5>
+                            <p class="card-text text-gray-600">Build muscle and boost endurance with our expert-designed strength programs.</p>
+                            <a href="/workouts" class="btn btn-outline-violet">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card workout-card h-100 border-0 shadow-lg">
+                        <img src="./assets/images/Cardio.jpeg" class="card-img-top" alt="Cardio Blast">
+                        <div class="card-body p-4">
+                            <h5 class="card-title text-dark">Cardio Blast</h5>
+                            <p class="card-text text-gray-600">Burn calories and improve heart health with high-energy cardio routines.</p>
+                            <a href="/workouts" class="btn btn-outline-violet">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card workout-card h-100 border-0 shadow-lg">
+                        <img src="./assets/images/Yoga.jpeg" class="card-img-top" alt="Yoga Flow">
+                        <div class="card-body p-4">
+                            <h5 class="card-title text-dark">Yoga Flow</h5>
+                            <p class="card-text text-gray-600">Enhance flexibility and mindfulness with our calming yoga sessions.</p>
+                            <a href="/workouts" class="btn btn-outline-violet">Learn More</a>
+                        </div>
+                </div>
+                </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- This is Community Section -->
+    <section id="community-section" class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4 animate__animated animate__fadeIn">Join the Click Fit Community</h2>
+            <p class="lead mb-5 text-gray-300">Connect with fitness enthusiasts, share your journey, and stay motivated together!</p>
+            <a href="#contact-section" class="btn btn-violet btn-lg shadow-lg">Join Now</a>
+        </div> </section>
+
+
+    <!-- New Contact Section -->
+    <section id="contact-section" class="py-5 bg-gradient-contact">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white animate__animated animate__fadeIn">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card contact-card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <form>
+                                <div class="mb-4">
+                                    <label for="name" class="form-label text-gray-700">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label text-gray-700">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                </div>
+                             <div class="mb-4">
+                                    <label for="message" class="form-label text-gray-700">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                                <button type="submit" class="btn btn-violet w-100">Send Message</button>
+                            </form>
+                            <div class="text-center mt-5">
+                                <h5 class="text-dark mb-3">Follow Us</h5>
+                                <div class="social-icons">
+                                    <a href="https://x.com/clickfit" class="social-icon mx-2" target="_blank" aria-label="Twitter/X">
+                                        <i class="fab fa-x-twitter fa-2x"></i>
+                                    </a>
+                                    <a href="https://instagram.com/clickfit" class="social-icon mx-2" target="_blank" aria-label="Instagram">
+                                        <i class="fab fa-instagram fa-2x"></i>
+                                    </a>
+                                    <a href="https://facebook.com/clickfit" class="social-icon mx-2" target="_blank" aria-label="Facebook">
+                                        <i class="fab fa-facebook-f fa-2x"></i>
+                                    </a>
+                                    <a href="https://youtube.com/clickfit" class="social-icon mx-2" target="_blank" aria-label="YouTube">
+                                        <i class="fab fa-youtube fa-2x"></i>
+                                    </a>
+                                </div>
+                               </div>
+        </div>
+    </div>
+                </div>
+              </div>
+               </div></section>
+
+ <!--This is FOOTER-->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2025 Click Fit. All rights reserved.</p>
+    </footer>
+
+ <!-- <div></div> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
